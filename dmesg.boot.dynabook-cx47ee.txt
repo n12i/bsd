@@ -1,0 +1,374 @@
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003,
+    2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
+    2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,
+    2024
+    The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 10.99.10 (GENERIC) #3: Sat Mar  2 00:34:54 JST 2024
+	root@cx47ee.stlab.kankyo-u.ac.jp:/usr/obj/sys/arch/amd64/compile/GENERIC
+total memory = 4086 MB
+avail memory = 3926 MB
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+mainbus0 (root)
+ACPI: RSDP 0x00000000000F77C0 000024 (v02 TOSQCI)
+ACPI: XSDT 0x00000000BF6D555E 000074 (v01 TOSQCI TOSQCI00 06040000  LTP 00000000)
+ACPI: FACP 0x00000000BF6DFC92 0000F4 (v03 TOSQCI TOSQCI00 06040000 ALAN 00000001)
+ACPI: DSDT 0x00000000BF6D6A09 009215 (v02 TOSQCI N.Jersey 06040000 MSFT 03000001)
+ACPI: FACS 0x00000000BF6E2FC0 000040
+ACPI: HPET 0x00000000BF6DFD86 000038 (v01 TOSQCI TOSQCI00 06040000 LOHR 0000005A)
+ACPI: MCFG 0x00000000BF6DFDBE 00003C (v01 TOSQCI TOSQCI00 06040000 LOHR 0000005A)
+ACPI: APIC 0x00000000BF6DFDFA 000068 (v01 PTLTD  ? APIC   06040000  LTP 00000000)
+ACPI: BOOT 0x00000000BF6DFE62 000028 (v01 PTLTD  $SBFTBL$ 06040000  LTP 00000001)
+ACPI: SLIC 0x00000000BF6DFE8A 000176 (v01 TOSQCI TOSQCI00 06040000  LTP 00000000)
+ACPI: SSDT 0x00000000BF6D675C 0002AD (v01 SataRe SataAhci 00001000 INTL 20061109)
+ACPI: SSDT 0x00000000BF6D5B5E 00025F (v01 PmRef  Cpu0Tst  00003000 INTL 20061109)
+ACPI: SSDT 0x00000000BF6D5AB8 0000A6 (v01 PmRef  Cpu1Tst  00003000 INTL 20061109)
+ACPI: SSDT 0x00000000BF6D55D2 0004E6 (v01 PmRef  CpuPm    00003000 INTL 20061109)
+ACPI: 5 ACPI AML tables successfully acquired and loaded
+ACPI Error: AE_NOT_FOUND, While resolving a named reference package element - Z000 (20230628/dspkginit-497)
+ACPI Error: AE_NOT_FOUND, While resolving a named reference package element - Z000 (20230628/dspkginit-497)
+ioapic0 at mainbus0 apid 2: pa 0xfec00000, version 0x20, 24 pins
+cpu0 at mainbus0 apid 0
+cpu0: Use lfence to serialize rdtsc
+cpu0: Intel(R) Core(TM)2 Duo CPU     T7250  @ 2.00GHz, id 0x6fd
+cpu0: node 0, package 0, core 0, smt 0
+cpu1 at mainbus0 apid 1
+cpu1: Intel(R) Core(TM)2 Duo CPU     T7250  @ 2.00GHz, id 0x6fd
+cpu1: node 0, package 0, core 1, smt 0
+acpi0 at mainbus0: Intel ACPICA 20230628
+acpi0: X/RSDT: OemId <TOSQCI,TOSQCI00,06040000>, AslId < LTP,00000000>
+allocated pic ioapic0 type level pin 9 level 6 to cpu0 slot 0 idt entry 96
+acpi0: MCFG: segment 0, bus 0-255, address 0x00000000e0000000
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFDD4239605448 00027A (v01 PmRef  Cpu0Ist  00003000 INTL 20061109)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFDD42396CA808 0005D8 (v01 PmRef  Cpu0Cst  00003001 INTL 20061109)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFDD4270E21A48 0000C8 (v01 PmRef  Cpu1Ist  00003000 INTL 20061109)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFDD4239614B08 000085 (v01 PmRef  Cpu1Cst  00003000 INTL 20061109)
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Fast" frequency 3579545 Hz quality 1000
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 14318180 Hz quality 2000
+acpiec0 at acpi0 (EC0, PNP0C09): io 0x62,0x66
+acpiacad0 at acpi0 (ACAD, ACPI0003): ACPI AC Adapter
+acpibat0 at acpi0 (BAT1, PNP0C0A-1): ACPI Battery
+acpilid0 at acpi0 (LID, PNP0C0D): ACPI Lid Switch
+acpibut0 at acpi0 (PWRB, PNP0C0C): ACPI Power Button
+TVAP (TOS1900) at acpi0 not configured
+HAPS (TOS620A) at acpi0 not configured
+acpiwmi0 at acpi0 (QWMI, PNP0C14-1): ACPI WMI Interface
+acpiwmibus at acpiwmi0 not configured
+acpivga0 at acpi0 (GFX0): ACPI Display Adapter
+acpiout0 at acpivga0 (DD01, 0x0100): ACPI Display Output Device
+acpiout1 at acpivga0 (DD02, 0x0410): ACPI Display Output Device
+acpiout1: brightness levels: [0,14,28,42,56,70,84,100]
+acpiout2 at acpivga0 (DD03, 0x0003): ACPI Display Output Device
+acpiout3 at acpivga0 (DD04, 0x0004): ACPI Display Output Device
+acpiout4 at acpivga0 (DD05, 0x0005): ACPI Display Output Device
+acpivga0: connected output devices:
+acpivga0:   0x0000: Unknown Output Device, head 0, bios detect
+acpivga0:   0x0000: Unknown Output Device, head 0, bios detect
+acpivga0:   0x0000: Unknown Output Device, head 0, bios detect
+acpivga0:   0x0000: Unknown Output Device, head 0, bios detect
+acpivga0:   0x0000: Unknown Output Device, head 0, bios detect
+acpidalb0 at acpi0 (DAL1, PNP0C32-1): Direct Application Launch Button
+acpidalb1 at acpi0 (DAL2, PNP0C32-2): Direct Application Launch Button
+attimer1 at acpi0 (TIMR, PNP0100): io 0x40-0x43,0x50-0x53 irq 0
+pckbc1 at acpi0 (PS2K, PNP0303) (kbd port): io 0x60,0x64 irq 1
+pckbc2 at acpi0 (PS2M, SYN1010) (aux port): irq 12
+acpitz0 at acpi0 (THRM): cpu0 cpu1
+acpitz0: levels: critical 104.0 C, passive 104.0 C, passive cooling
+ACPI: Enabled 9 GPEs in block 00 to 1F
+pckbd0 at pckbc1 (kbd slot)
+allocated pic ioapic0 type edge pin 1 level 6 to cpu0 slot 1 idt entry 97
+pckbc1: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc1 (aux slot)
+pms0: Synaptics touchpad version 6.5
+pms0: Palm detect, Two button click pad, Reports max, Reports min
+pms0: Probed max coordinates right: 1026, top: 2074
+pms0: Probed min coordinates left: 1888, bottom: 2052
+allocated pic ioapic0 type edge pin 12 level 6 to cpu0 slot 2 idt entry 98
+pckbc1: using irq 12 for aux slot
+wsmouse0 at pms0 mux 0
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+pchb0 at pci0 dev 0 function 0: Intel 82965PM Host Bridge (rev. 0x03)
+agp0 at pchb0: i965-family chipset
+agp0: detected 7676k stolen memory
+agp0: aperture at 0xd0000000, size 0x20000000
+i915drmkms0 at pci0 dev 2 function 0: Intel 82965PM Integrated Graphics Device (rev. 0x03)
+Intel 82965PM Integrated Graphics Device (miscellaneous display, revision 0x03) at pci0 dev 2 function 1 not configured
+uhci0 at pci0 dev 26 function 0: Intel 82801H USB UHCI Controller (rev. 0x03)
+allocated pic ioapic0 type level pin 16 level 6 to cpu0 slot 3 idt entry 99
+uhci0: interrupting at ioapic0 pin 16
+usb0 at uhci0: USB revision 1.0
+uhci1 at pci0 dev 26 function 1: Intel 82801H USB UHCI Controller (rev. 0x03)
+allocated pic ioapic0 type level pin 21 level 6 to cpu0 slot 4 idt entry 100
+uhci1: interrupting at ioapic0 pin 21
+usb1 at uhci1: USB revision 1.0
+ehci0 at pci0 dev 26 function 7: Intel 82801H USB EHCI Controller (rev. 0x03)
+ehci0: 64-bit DMA
+allocated pic ioapic0 type level pin 18 level 6 to cpu0 slot 5 idt entry 101
+ehci0: interrupting at ioapic0 pin 18
+ehci0: EHCI version 1.0
+ehci0: 2 companion controllers, 2 ports each: uhci0 uhci1
+ehci0: Using DMA subregion for control data structures
+usb2 at ehci0: USB revision 2.0
+hdaudio0 at pci0 dev 27 function 0: HD Audio Controller
+allocated pic msi0 type edge pin 0 level 7 to cpu0 slot 16 idt entry 112
+hdaudio0: interrupting at msi0 vec 0
+hdaudio0: HDA ver. 1.0, OSS 4, ISS 4, BSS 0, SDO 1, 64-bit
+hdafg0 at hdaudio0: Realtek ALC268
+hdafg0: DAC00 2ch: Speaker [Built-In], HP Out [Jack]
+hdafg0: ADC01 2ch: Mic In [Jack]
+hdafg0: 2ch/2ch 44100Hz 48000Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg0: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr0 at audio0: PC Speaker (synthesized)
+wsbell at spkr0 not configured
+hdvsmfg at hdaudio0 not configured
+ppb0 at pci0 dev 28 function 0: Intel 82801H PCI Express Port #1 (rev. 0x03)
+ppb0: PCI Express capability version 1 <Root Port of PCI-E Root Complex> x1 @ 2.5GT/s
+pci1 at ppb0 bus 2
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb1 at pci0 dev 28 function 1: Intel 82801H PCI Express Port #2 (rev. 0x03)
+ppb1: PCI Express capability version 1 <Root Port of PCI-E Root Complex> x1 @ 2.5GT/s
+pci2 at ppb1 bus 3
+pci2: i/o space, memory space enabled, rd/line, wr/inv ok
+re0 at pci2 dev 0 function 0: RealTek 8100E/8101E/8102E/8102EL PCIe 10/100BaseTX (rev. 0x01)
+allocated pic msi1 type edge pin 0 level 6 to cpu0 slot 17 idt entry 102
+re0: interrupting at msi1 vec 0
+re0: RTL8101E (0x3400)
+re0: Ethernet address 00:1e:68:2b:62:77
+re0: using 256 tx descriptors
+rlphy0 at re0 phy 7: RTL8201L 10/100 media interface, rev. 1
+rlphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+ppb2 at pci0 dev 28 function 2: Intel 82801H PCI Express Port #3 (rev. 0x03)
+ppb2: PCI Express capability version 1 <Root Port of PCI-E Root Complex> x1 @ 2.5GT/s
+pci3 at ppb2 bus 4
+pci3: i/o space, memory space enabled, rd/line, wr/inv ok
+ath0 at pci3 dev 0 function 0: Atheros 5424/2424
+allocated pic ioapic0 type level pin 18 level 6 to cpu0 slot 5 idt entry 101
+ath0: interrupting at ioapic0 pin 18
+ath0: mac 10.2 phy 6.1 radio 10.2
+ath0: Use hw queue 1 for WME_AC_BE traffic
+ath0: Use hw queue 0 for WME_AC_BK traffic
+ath0: Use hw queue 2 for WME_AC_VI traffic
+ath0: Use hw queue 3 for WME_AC_VO traffic
+ath0: Use hw queue 8 for CAB traffic
+ath0: Use hw queue 9 for beacons
+ppb3 at pci0 dev 28 function 3: Intel 82801H PCI Express Port #4 (rev. 0x03)
+ppb3: PCI Express capability version 1 <Root Port of PCI-E Root Complex> x1 @ 2.5GT/s
+pci4 at ppb3 bus 5
+pci4: i/o space, memory space enabled, rd/line, wr/inv ok
+uhci2 at pci0 dev 29 function 0: Intel 82801H USB UHCI Controller (rev. 0x03)
+allocated pic ioapic0 type level pin 23 level 6 to cpu0 slot 6 idt entry 103
+uhci2: interrupting at ioapic0 pin 23
+usb3 at uhci2: USB revision 1.0
+uhci3 at pci0 dev 29 function 1: Intel 82801H USB UHCI Controller (rev. 0x03)
+allocated pic ioapic0 type level pin 19 level 6 to cpu0 slot 7 idt entry 104
+uhci3: interrupting at ioapic0 pin 19
+usb4 at uhci3: USB revision 1.0
+uhci4 at pci0 dev 29 function 2: Intel 82801H USB UHCI Controller (rev. 0x03)
+allocated pic ioapic0 type level pin 18 level 6 to cpu0 slot 5 idt entry 101
+uhci4: interrupting at ioapic0 pin 18
+usb5 at uhci4: USB revision 1.0
+ehci1 at pci0 dev 29 function 7: Intel 82801H USB EHCI Controller (rev. 0x03)
+ehci1: 64-bit DMA
+allocated pic ioapic0 type level pin 23 level 6 to cpu0 slot 6 idt entry 103
+ehci1: interrupting at ioapic0 pin 23
+ehci1: EHCI version 1.0
+ehci1: 3 companion controllers, 2 ports each: uhci2 uhci3 uhci4
+ehci1: Using DMA subregion for control data structures
+usb6 at ehci1: USB revision 2.0
+ppb4 at pci0 dev 30 function 0: Intel 82801BAM Hub-PCI Bridge (rev. 0xf3)
+pci5 at ppb4 bus 10
+pci5: i/o space, memory space enabled
+fwohci0 at pci5 dev 1 function 0: Ricoh 5C832 PCI-SD/MMC/MMC+/MS/xD/Firewire (rev. 0x05)
+allocated pic ioapic0 type level pin 16 level 6 to cpu0 slot 3 idt entry 99
+fwohci0: interrupting at ioapic0 pin 16
+fwohci0: OHCI version 1.10 (ROM=0)
+fwohci0: No. of Isochronous channels is 4.
+fwohci0: EUI64 00:1b:24:00:00:c4:29:81
+fwohci0: Phy 1394a available S400, 1 ports.
+fwohci0: Link S400, max_rec 2048 bytes.
+ieee1394if0 at fwohci0: IEEE1394 bus
+fwip0 at ieee1394if0: IP over IEEE1394
+fwohci0: Initiate bus reset
+fwohci0: Clear PME# now
+sdhc0 at pci5 dev 1 function 1: Ricoh 5C822 PCI-CardBus Bridge/MS/SD/MMC/SC (rev. 0x22)
+allocated pic ioapic0 type level pin 17 level 6 to cpu0 slot 8 idt entry 105
+sdhc0: interrupting at ioapic0 pin 17
+sdhc0: SDHC 1.0, rev 4, caps <01e021a1/00000000>, SDMA, 33000 kHz, HS 3.3V, 512 byte blocks
+sdmmc0 at sdhc0 slot 0
+Ricoh 5C843 PCI-CardBus Bridge/SD/MMC/MMC+/MS/xD/Firewire (miscellaneous system, revision 0x12) at pci5 dev 1 function 2 not configured
+Ricoh 5C592 PCI-CardBus Bridge/MS/SD/Firewire (miscellaneous system, revision 0x12) at pci5 dev 1 function 3 not configured
+Ricoh xD-Picture Card Controller (miscellaneous system, revision 0x12) at pci5 dev 1 function 4 not configured
+cbb0 at pci5 dev 4 function 0: ENE Technology CB1410 CardBus Controller (rev. 0x01)
+cbb0: cacheline 0x10 lattimer 0x20
+cbb0: bhlc 0x22010
+allocated pic ioapic0 type level pin 18 level 6 to cpu0 slot 5 idt entry 101
+cbb0: interrupting at ioapic0 pin 18
+cardslot0 at cbb0
+cardbus0 at cardslot0: bus 11 cacheline 0x10, lattimer 0x20
+pcmcia0 at cardslot0
+ichlpcib0 at pci0 dev 31 function 0: Intel 82801HBM LPC Interface Bridge (rev. 0x03)
+timecounter: Timecounter "ichlpcib0" frequency 3579545 Hz quality 1000
+ichlpcib0: 24-bit timer
+tco0 at ichlpcib0: TCO (watchdog) timer configured.
+tco0: Min/Max interval 1/367 seconds
+piixide0 at pci0 dev 31 function 1: Intel 82801HBM IDE Controller (ICH8M) (rev. 0x03)
+piixide0: bus-master DMA support present
+piixide0: primary channel configured to compatibility mode
+allocated pic ioapic0 type edge pin 14 level 6 to cpu0 slot 9 idt entry 106
+piixide0: primary channel interrupting at ioapic0 pin 14
+atabus0 at piixide0 channel 0
+piixide0: secondary channel configured to compatibility mode
+allocated pic ioapic0 type edge pin 15 level 6 to cpu0 slot 10 idt entry 107
+piixide0: secondary channel interrupting at ioapic0 pin 15
+atabus1 at piixide0 channel 1
+ahcisata0 at pci0 dev 31 function 2: Intel 82801HBM AHCI SATA Controller (rev. 0x03)
+ahcisata0: 64-bit DMA
+ahcisata0: AHCI revision 1.10, 3 ports, 32 slots, CAP 0xe720ff82<CCCS,PSC,SSC,PMD,ISS=0x2=Gen2,SCLO,SAL,SALP,SSNTF,SNCQ,S64A>
+allocated pic msi2 type edge pin 0 level 6 to cpu0 slot 18 idt entry 108
+ahcisata0: interrupting at msi2 vec 0
+atabus2 at ahcisata0 channel 0
+atabus3 at ahcisata0 channel 1
+atabus4 at ahcisata0 channel 2
+ichsmb0 at pci0 dev 31 function 3: Intel 82801H SMBus Controller (rev. 0x03)
+allocated pic ioapic0 type level pin 19 level 6 to cpu0 slot 7 idt entry 104
+ichsmb0: interrupting at ioapic0 pin 19
+iic0 at ichsmb0: I2C bus
+isa0 at ichlpcib0
+pcppi0 at isa0 port 0x61
+spkr1 at pcppi0: PC Speaker
+wsbell at spkr1 not configured
+midi0 at pcppi0: PC speaker
+sysbeep0 at pcppi0
+attimer1: attached to pcppi0
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: FFH, lat   1 us, pow  1000 mW
+acpicpu0: C2: FFH, lat   1 us, pow   500 mW
+acpicpu0: C3: FFH, lat  57 us, pow   100 mW, bus master check
+acpicpu0: P0: FFH, lat  10 us, pow 35000 mW, 2001 MHz, turbo boost
+acpicpu0: P1: FFH, lat  10 us, pow 35000 mW, 2000 MHz
+acpicpu0: P2: FFH, lat  10 us, pow 25000 mW, 1600 MHz
+acpicpu0: P3: FFH, lat  10 us, pow 16000 mW, 1200 MHz
+acpicpu0: P4: FFH, lat  10 us, pow 14000 mW,  800 MHz
+acpicpu0: T0: FFH, lat   1 us, pow 14000 mW, 100 %
+acpicpu0: T1: FFH, lat   1 us, pow 12250 mW,  88 %
+acpicpu0: T2: FFH, lat   1 us, pow 10500 mW,  75 %
+acpicpu0: T3: FFH, lat   1 us, pow  8750 mW,  63 %
+acpicpu0: T4: FFH, lat   1 us, pow  7000 mW,  50 %
+acpicpu0: T5: FFH, lat   1 us, pow  5250 mW,  38 %
+acpicpu0: T6: FFH, lat   1 us, pow  3500 mW,  25 %
+acpicpu0: T7: FFH, lat   1 us, pow  1750 mW,  13 %
+coretemp0 at cpu0: thermal sensor, 1 C resolution, Tjmax=100
+acpicpu1 at cpu1: ACPI CPU
+coretemp1 at cpu1: thermal sensor, 1 C resolution, Tjmax=100
+fwohci0: BUS reset
+fwohci0: node_id=0xc800ffc0, gen=1, CYCLEMASTER mode
+ieee1394if0: 1 nodes, maxhop <= 0 cable IRM irm(0) (me)
+ieee1394if0: bus manager 0
+timecounter: Timecounter "lapic" frequency 199500000 Hz quality -100
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 1995000000 Hz quality -100
+IPsec: Initialized Security Association Processing.
+uhub0 at usb0: NetBSD (0x0000) UHCI root hub (0x0000), class 9/0, rev 1.00/1.00, addr 1
+uhub0: 2 ports with 2 removable, self powered
+uhub1 at usb1: NetBSD (0x0000) UHCI root hub (0x0000), class 9/0, rev 1.00/1.00, addr 1
+uhub1: 2 ports with 2 removable, self powered
+uhub2 at usb2: NetBSD (0x0000) EHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 1
+uhub2: 4 ports with 4 removable, self powered
+uhub3 at usb3: NetBSD (0x0000) UHCI root hub (0x0000), class 9/0, rev 1.00/1.00, addr 1
+uhub3: 2 ports with 2 removable, self powered
+uhub4 at usb4: NetBSD (0x0000) UHCI root hub (0x0000), class 9/0, rev 1.00/1.00, addr 1
+uhub4: 2 ports with 2 removable, self powered
+uhub5 at usb5: NetBSD (0x0000) UHCI root hub (0x0000), class 9/0, rev 1.00/1.00, addr 1
+uhub5: 2 ports with 2 removable, self powered
+acpiacad0: AC adapter online.
+uhub6 at usb6: NetBSD (0x0000) EHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 1
+uhub6: 6 ports with 6 removable, self powered
+ahcisata0 port 0: device present, speed: 3.0Gb/s
+atapibus0 at atabus0: 2 targets
+cd0 at atapibus0 drive 0: <MATSHITADVD-RAM UJ-852S, HE17  093180, 1.80> cdrom removable
+cd0: 32-bit data port
+cd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 2 (Ultra/33)
+cd0(piixide0:0:0): using PIO mode 4, Ultra-DMA mode 2 (Ultra/33) (using DMA)
+ehci1: handing over full speed device on port 1 to uhci2
+ahcisata0 port 1: PHY offline
+ehci1: handing over full speed device on port 5 to uhci4
+wd0 at atabus2 drive 0
+wd0: <ADATA SP600>
+wd0: drive supports 16-sector PIO transfers, LBA48 addressing
+wd0: 238 GB, 496149 cyl, 16 head, 63 sec, 512 bytes/sect x 500118192 sectors
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100), WRITE DMA FUA, NCQ (32 tags)
+wd0(ahcisata0:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100) (using DMA), NCQ (31 tags)
+crypto: assign driver 0, flags 2
+crypto: driver 0 registers alg 1 flags 0 maxoplen 0
+crypto: driver 0 registers alg 2 flags 0 maxoplen 0
+crypto: driver 0 registers alg 3 flags 0 maxoplen 0
+crypto: driver 0 registers alg 4 flags 0 maxoplen 0
+crypto: driver 0 registers alg 5 flags 0 maxoplen 0
+crypto: driver 0 registers alg 26 flags 0 maxoplen 0
+crypto: driver 0 registers alg 27 flags 0 maxoplen 0
+crypto: driver 0 registers alg 29 flags 0 maxoplen 0
+crypto: driver 0 registers alg 33 flags 0 maxoplen 0
+crypto: driver 0 registers alg 17 flags 0 maxoplen 0
+crypto: driver 0 registers alg 6 flags 0 maxoplen 0
+crypto: driver 0 registers alg 19 flags 0 maxoplen 0
+crypto: driver 0 registers alg 7 flags 0 maxoplen 0
+crypto: driver 0 registers alg 20 flags 0 maxoplen 0
+crypto: driver 0 registers alg 15 flags 0 maxoplen 0
+crypto: driver 0 registers alg 24 flags 0 maxoplen 0
+crypto: driver 0 registers alg 25 flags 0 maxoplen 0
+crypto: driver 0 registers alg 8 flags 0 maxoplen 0
+crypto: driver 0 registers alg 21 flags 0 maxoplen 0
+crypto: driver 0 registers alg 16 flags 0 maxoplen 0
+crypto: driver 0 registers alg 9 flags 0 maxoplen 0
+crypto: driver 0 registers alg 10 flags 0 maxoplen 0
+crypto: driver 0 registers alg 13 flags 0 maxoplen 0
+crypto: driver 0 registers alg 14 flags 0 maxoplen 0
+crypto: driver 0 registers alg 28 flags 0 maxoplen 0
+crypto: driver 0 registers alg 30 flags 0 maxoplen 0
+crypto: driver 0 registers alg 31 flags 0 maxoplen 0
+crypto: driver 0 registers alg 32 flags 0 maxoplen 0
+crypto: driver 0 registers alg 11 flags 0 maxoplen 0
+crypto: driver 0 registers alg 18 flags 0 maxoplen 0
+crypto: driver 0 registers alg 23 flags 0 maxoplen 0
+crypto: driver 0 registers alg 22 flags 0 maxoplen 0
+swwdog0: software watchdog initialized
+boot device: wd0
+root on wd0a dumps on wd0b
+root file system type: ffs
+kern.module.path=/stand/amd64/10.99.10/modules
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+allocated pic ioapic0 type level pin 16 level 6 to cpu0 slot 3 idt entry 99
+i915drmkms0: interrupting at ioapic0 pin 16 (i915drmkms0)
+[drm] Initialized overlay support.
+[drm] Initialized i915 1.6.0 20200114 for i915drmkms0 on minor 0
+intelfb0 at i915drmkms0
+[drm] DRM_I915_DEBUG enabled
+[drm] DRM_I915_DEBUG_GEM enabled
+intelfb0: framebuffer at 0xd0020000, size 1280x800, depth 32, stride 5120
+wsdisplay0 at intelfb0 kbdmux 1: console (default, vt100 emulation), using wskbd0
+wsmux1: connecting to wsdisplay0
+uplcom0 at uhub3 port 1
+uplcom0: Prolific Technology Inc. (0x067b) USB-Serial Controller (0x2303), rev 2.00/3.00, addr 2
+ucom0 at uplcom0
+ugen0 at uhub5 port 1
+ugen0: STMicroelectronics (0x0483) Biometric Coprocessor (0x2016), rev 1.00/0.01, addr 2
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)
