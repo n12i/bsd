@@ -1,0 +1,213 @@
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010
+    The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 5.2.3 (GENERIC) #0: Sat Nov 15 21:23:59 UTC 2014
+	builds@b41.netbsd.org:/home/builds/ab/netbsd-5-2-3-RELEASE/hpcmips/201411152021Z-obj/home/source/ab/netbsd-5-2-3-RELEASE/src/sys/arch/hpcmips/compile/GENERIC
+NEC MC-R530 (NEC VR4121 rev1.2 168.521MHz)
+total memory = 49152 KB
+total memory banks = 3
+memory bank 0 = 0x00000000 3956KB(0x003dd000)
+memory bank 1 = 0x003dd000 28812KB(0x01c23000)
+memory bank 2 = 0x02000000 16384KB(0x01000000)
+avail memory = 43832 KB
+timecounter: Timecounters tick every 10.000 msec
+mainbus0 (root)
+cpu0 at mainbus0: NEC VR4100 CPU (0xc60) Rev. 6.0 with software emulated floating point
+cpu0: 16KB/16B direct-mapped L1 Instruction cache, 32 TLB entries
+cpu0: 8KB/16B direct-mapped write-back L1 Data cache
+vr4102ip0 at mainbus0
+vrbcu0 at vr4102ip0 addr 0x0b000000-001f
+vrbcu0: CPU 168.521MHz, bus 28.086MHz, ram 56.173MHz
+vrcmu0 at vr4102ip0 addr 0x0b000060-007f
+vrgiu0 at vr4102ip0 addr 0x0b000100-011f
+                                             3         2         1
+                                            10987654321098765432109876543210
+WIN setting:                                iiiiiiiiiiiiiiiiEilEihhiiiiiEEii
+I/O setting:                                iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+       data:....................||||||||||||................|.||....|.||....
+button1 at vrgiu0 port=3 id=13 active=high sense=edge
+button2 at vrgiu0 port=2 id=16 active=high sense=edge
+pwctl0 at vrgiu0 port=46 id=0 on=1
+pwctl3 at vrgiu0 port=44 id=6 on=1
+mq200: probe: vendor id=4d51 product id=0200
+ite8181_probe: vendor id=4d51 product id=0200
+vrc4172pwmprobe: check platid
+vrc4172pwmprobe: VRC2_PWM_LCDDUTYEN found
+vrc4172pwmprobe: return 1
+vrdmaau0 at vr4102ip0 addr 0x0b000020-0037
+vrdcu0 at vr4102ip0 addr 0x0b000040-004b
+vrrtc0 at vr4102ip0 addr 0x0b0000c0-00df
+vrkiu0 at vr4102ip0 addr 0x0b000180-019f
+hpckbd0 at vrkiu0
+wskbd0 at hpckbd0: console keyboard
+vrpmu0 at vr4102ip0 addr 0x0b0000a0-00bf
+vrdsu0 at vr4102ip0 addr 0x0b0000e0-00e7
+vrled0 at vr4102ip0 addr 0x0b000240-024f
+vrpiu0 at vr4102ip0 addr 0x0b000120-013f, 0x0b0002a0-02bf
+wsmouse0 at vrpiu0 mux 0
+vrpiu0: WARNING: powerhook_establish is deprecated
+mq200: probe: vendor id=4d51 product id=0200
+mqvideo0 at vr4102ip0 addr 0x0a000000-7fffff: MQ200 Rev.00 video controller, console
+mqvideo0: framebuffer address: 0xaa180100
+GC00R: 00000000
+GC01R: 00000800
+GC02R: 028002a0
+GC03R: 00ef00f9
+GC04R: 02900288
+GC05R: 00f500f3
+GC06R: 00f500f3
+GC07R: 00f50000
+GC08R: 027f0000
+GC09R: 00ef0000
+GC0AR: 0092002e
+GC0BR: 01010000
+GC0CR: 01180100
+GC0DR: 011dbf98
+GC0ER: 05000500
+GC0FR: 05000500
+GC10R: c0000400
+GC11R: c000072d
+GC12R: c0000020
+GC13R: c0040008
+GC20R: 012130c9
+GC21R: 00000000
+GC22R: 028002a0
+GC23R: 00ef00f9
+GC24R: 02900288
+GC25R: 00f500f3
+GC26R: 00f500f3
+GC27R: 00f500df
+GC28R: 027f0000
+GC29R: 00ef0000
+GC2AR: 014f0098
+GC2BR: 0092002e
+GC2CR: 00980100
+GC2DR: 0098e830
+GC2ER: 05000500
+GC2FR: 05000500
+GC30R: c0000000
+GC31R: c000072d
+GC32R: c0000000
+GC33R: c0000818
+FP00R: 00434127
+FP01R: 00c4f2a0
+FP02R: 0000fc00
+FP03R: 00000000
+FP04R: 00bd0000
+FP05R: ffffffff
+FP06R: ffffffff
+FP07R: ffffffff
+FP08R: ffffffff
+FP09R: ffffffff
+FP0AR: ffffffff
+FP0BR: ffffffff
+FP0CR: ffffffff
+FP0DR: ffffffff
+FP0ER: ffffffff
+FP0FR: 99101600
+CC00R: 00000080
+CC01R: 00000810
+PC00R: 02004d51
+PC01R: 02800000
+PC02R: 03800002
+PC03R: 00000000
+PC04R: 00000000
+PC05R: 00000000
+MM00R: 6d60010b
+MM01R: 40750087
+MM02R: 6d6aabff
+MM03R: 6d6aabff
+MM04R: 6d60010d
+DC00R: 0e98292a
+DC01R: 00000004
+DC02R: 00000000
+DC03R: 00000000
+PM00R: 00201104
+PM01R: 05000271
+PM02R: 00000071
+PM03R: 00000071
+PM06R: 00d60a30
+PM07R: 00f40940
+IN00R: 00000000
+IN01R: 00000000
+IN02R: 00000008
+IN03R: 00000a40
+  PLL1: 47.001MHz(0x0e98292a, 12.288MHzx153/ 40)
+  PLL2: 30.021MHz(0x00d60a30, 12.288MHzx215/ 88)
+  PLL3: disable
+   MEM: 30.021MHz(PLL2)
+    GE: 30.021MHz(PLL2)
+   GC1: disable
+   GC2: 18.800MHz(PLL1/2.5/1), FP
+  PLL1: 29.952MHz(0x0ee90b3a, 12.288MHzx234/ 96)
+  PLL2: 18.773MHz(0x00db0840, 12.288MHzx220/144)
+  PLL3: disable
+   MEM: 29.952MHz(PLL1)
+    GE: 18.773MHz(PLL2)
+   GC1: disable
+   GC2: 18.773MHz(PLL2/1/1), FP
+mqvideo0: WARNING: powerhook_establish is deprecated
+mq200: init_brightness
+mq200: init_contrast
+hpcfb0 at mqvideo0: 640x240 pixels, 65536 colors, 80x24 chars
+hpcfb0: WARNING: powerhook_establish is deprecated
+wsdisplay0 at hpcfb0 kbdmux 1: console (std, vt100 emulation), using wskbd0
+wsmux1: connecting to wsdisplay0
+vrc4172pwmprobe: check platid
+vrc4172pwmprobe: VRC2_PWM_LCDDUTYEN found
+vrc4172pwmprobe: return 1
+vrc4172pwm0 at vr4102ip0 addr 0x15003880-3885
+vrc4172pwm: dumpreg: lightenable = 1, freq = 0x2a, duty = 0x30
+vraiu0 at vr4102ip0 addr 0x0b000160-017f
+audio0 at vraiu0: half duplex, playback, capture
+vrisab0 at vrgiu0: ISA port 0x14000000-0x18000000 mem 0x10000000-0x14000000
+isa0 at vrisab0
+pcic0 at isa0 port 0x3e0-0x3e1 iomem 0x70000-0x73fff irq 589827
+pcic0: controller 0 (Ricoh RF5C396) has sockets A and B
+pcmcia0 at pcic0 controller 0 socket 0
+pcmcia1 at pcic0 controller 0 socket 1
+btnmgr0 at mainbus0
+wskbd1 at btnmgr0 mux 1
+wskbd1: connecting to wsdisplay0
+hpcapm0 at mainbus0: pseudo power management module
+apmdev0 at hpcapm0: Power Management spec V1.2
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "vrrtc" frequency 32768 Hz quality 100
+ISA IRQ 3 -> vrgiu0 port 9, level high through
+pcic0: using irq 589827 for socket events
+pcic0: WARNING: powerhook_establish is deprecated
+pcic0: WARNING: powerhook_establish is deprecated
+vrpiu:AD: 876, 926, 379
+giu data: ....................||||||||||||................|.||....|.||....
+wdc1 at pcmcia0 function 0: <Key Technology Corp., FC1307  >
+pcic0: port 0x14000400-0x1400040f
+wdc1: i/o mapped mode
+ISA IRQ 3 -> vrgiu0 port 9, level high through
+pcmcia0: card irq 3
+atabus0 at wdc1 channel 0
+wd0 at atabus0 drive 0: <FC-1307 SD to CF Adapter V1.5>
+wd0: drive supports 1-sector PIO transfers, LBA addressing
+wd0: 29530 MB, 59997 cyl, 16 head, 63 sec, 512 bytes/sect x 60477440 sectors
+wd0: drive supports PIO mode 4, DMA mode 2
+ep0 at pcmcia1 function 0: <3Com Corporation, 3C589, TP/BNC LAN Card Ver. 2a, 000002>
+pcic0: port 0x14000410-0x1400041f
+ISA IRQ 3 -> vrgiu0 port 9, level high through
+pcmcia1: card irq 3
+ep0: address 00:a0:24:63:24:fa, 8KB byte-wide FIFO, 5:3 Rx:Tx split
+ep0: 10baseT, 10base5, 10base2 (default 10baseT)
+boot device: wd0
+root on wd0a dumps on wd0b
+ISA IRQ 3 -> vrgiu0 port 9, level high through
+pcmcia0: card irq 3
+ISA IRQ 3 -> vrgiu0 port 9, level high through
+pcmcia0: card irq 3
+root file system type: ffs
+WARNING: clock lost 8916 days
+WARNING: using filesystem time
+WARNING: CHECK AND RESET THE DATE!
+ISA IRQ 3 -> vrgiu0 port 9, level high through
+pcmcia1: card irq 3
+vrpiu:AD: 871, 926, 381
