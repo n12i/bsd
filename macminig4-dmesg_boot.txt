@@ -1,0 +1,207 @@
+
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003,
+    2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
+    2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,
+    2024, 2025
+    The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 10.1_STABLE (GENERIC) #19: Thu Jan 16 20:08:22 JST 2025
+	root@kanako.4407.kankyo-u.ac.jp:/usr/src/sys/arch/macppc/compile/obj.macppc/GENERIC
+total memory = 512 MB
+avail memory = 480 MB
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+found openpic PIC at 80040000
+OpenPIC Version 1.2: Supports 4 CPUs and 64 interrupt sources.
+bootpath: /pci@f4000000/ethernet@f:0/netbsd
+mainbus0 (root)
+cpu0 at mainbus0: 7447A (Revision 1.2), ID 0 (primary)
+cpu0: HID0 0x84d0c1bc<EMCP,TBEN,HIGH_BAT_EN,NAP,DPM,ICE,DCE,XBSEN,SGE,BTIC,LRSTK,FOLD,BHT>, powersave: 1
+cpu0: 1416.67 MHz, 512KB L2 cache no parity
+memory0 at mainbus0: len=128
+spdmem0 at memory0
+spdmem0: DDR SDRAM, no parity or ECC, 512MB, 400MHz (PC-3200)
+spdmem0: 13 rows, 10 cols, 2 ranks, 4 banks/chip, 5.0ns cycle time
+spdmem0: tAA-tRCD-tRP-tRAS: 2-3-3-8
+spdmem0: voltage SSTL 2.5V, refresh time 7.8us (self-refreshing)
+uni_n0 at mainbus0 address 0xf8000000
+hw-clock at uni_n0 not configured
+ki2c0 at uni_n0 address 0xf8001000
+iic0 at ki2c0: I2C bus
+cereal (cereal) at iic0 addr 0xe0 not configured
+uninorth0 at mainbus0
+pci0 at uninorth0 bus 0
+pci0: i/o space, memory space enabled
+pchb0 at pci0 dev 11 function 0
+pchb0: Apple Computer UniNorth AGP Bridge (rev. 0x00)
+radeonfb0 at pci0 dev 16 function 0: ATI Technologies Radeon 9200 5962 (rev. 0x01)
+trying to read disabled BIOS...
+radeonfb0: No video BIOS, using default clocks
+radeonfb0: refclk = 27.000 MHz, refdiv = 12 minpll = 125000, maxpll = 400000
+radeonfb0: 64 MB aperture at 0x98000000, 64 KB registers at 0x90000000
+radeonfb0: display 0: initial virtual resolution 1680x1050 at 8 bpp
+radeonfb0: using 32 MB per display
+radeonfb0: port 0: physical 1680x1050 60Hz
+radeonfb0: port 1: physical 1680x1050 60Hz
+wsdisplay0 at radeonfb0 kbdmux 1: console (fb, vt100 emulation)
+wsmux1: connecting to wsdisplay0
+drm at radeonfb0 not configured
+uninorth1 at mainbus0
+pci1 at uninorth1 bus 0
+pci1: i/o space, memory space enabled
+pchb1 at pci1 dev 11 function 0
+pchb1: Apple Computer UniNorth Host-PCI Bridge (rev. 0x00)
+bwi0 at pci1 dev 18 function 0: Broadcom Wireless
+bwi0: interrupting at irq 52
+bwi0: BBP id 0x4306, BBP rev 0x3, BBP pkg 0
+bwi0: MAC: rev 5
+bwi0: PHY type 2, rev 2, ver 2
+bwi0: RF manu 0x17f, type 0x2050, rev 2
+bwi0: autoconfiguration error: invalid antenna gain in sprom
+obio0 at pci1 dev 23 function 0: addr 0x80000000
+zsc0 at obio0 irq 22,23
+zstty0 at zsc0 channel 0
+zstty1 at zsc0 channel 1
+snapper0 at obio0 offset 0x10000: irq 30,1,2
+pmu0 at obio0 offset 0x16000 irq 47:  rev. 85
+pmu0: initializing IIC bus
+iic1 at pmu0: I2C bus
+admtemp0 at iic1 addr 0x48: MAX6642 temperature sensor: id. 0x4d, rev. 0x4d
+pmu0: initializing RTC
+pmu0: power-mgt not configured
+pmu0: pmu-pwm-fans not configured
+ki2c1 at obio0
+iic2 at ki2c1: I2C bus
+cereal (cereal) at iic2 addr 0xe0 not configured
+wdc0 at obio0 offset 0x20000 irq 24, level triggered: DMA transfer
+atabus0 at wdc0 channel 0
+snapper0: software codec
+audio0 at snapper0: playback, capture, full duplex
+audio0: slinear_be:16 -> slinear_be:16 2ch 48000Hz, blk 12288 bytes (64ms) for playback
+audio0: slinear_be:16 <- slinear_be:16 2ch 48000Hz, blk 12288 bytes (64ms) for recording
+spkr0 at audio0: PC Speaker (synthesized)
+wsbell at spkr0 not configured
+ohci0 at pci1 dev 24 function 0: Apple Computer Intrepid USB Controller (rev. 0x00)
+ohci0: autoconfiguration error: memory access is disabled
+ohci1 at pci1 dev 25 function 0: Apple Computer Intrepid USB Controller (rev. 0x00)
+ohci1: autoconfiguration error: memory access is disabled
+ohci2 at pci1 dev 26 function 0: Apple Computer Intrepid USB Controller (rev. 0x00)
+ohci2: interrupting at irq 29
+ohci2: OHCI version 1.0, legacy support
+usb0 at ohci2: USB revision 1.0
+ohci3 at pci1 dev 27 function 0: NEC USB Host Controller (rev. 0x43)
+ohci3: interrupting at irq 63
+ohci3: OHCI version 1.0
+usb1 at ohci3: USB revision 1.0
+ohci4 at pci1 dev 27 function 1: NEC USB Host Controller (rev. 0x43)
+ohci4: interrupting at irq 63
+ohci4: OHCI version 1.0
+usb2 at ohci4: USB revision 1.0
+ehci0 at pci1 dev 27 function 2: NEC USB2 Host Controller (rev. 0x04)
+ehci0: 32-bit DMA
+ehci0: interrupting at irq 63
+ehci0: EHCI version 1.0
+ehci0: 2 companion controllers, 3 ports each: ohci3 ohci4
+usb3 at ehci0: USB revision 2.0
+uninorth2 at mainbus0
+pci2 at uninorth2 bus 0
+pci2: i/o space, memory space enabled
+pchb2 at pci2 dev 11 function 0
+pchb2: Apple Computer UniNorth Host-PCI Bridge (rev. 0x00)
+wdc1 at pci2 dev 13 function 0: interrupting at irq 39
+atabus1 at wdc1 channel 0
+fwohci0 at pci2 dev 14 function 0: Apple Computer UniNorth Firewire (rev. 0x81)
+fwohci0: interrupting at irq 40
+fwohci0: OHCI version 1.10 (ROM=0)
+fwohci0: No. of Isochronous channels is 8.
+fwohci0: EUI64 00:11:24:ff:fe:76:dd:a0
+fwohci0: Phy 1394a available S400, 2 ports.
+fwohci0: Link S400, max_rec 2048 bytes.
+ieee1394if0 at fwohci0: IEEE1394 bus
+fwip0 at ieee1394if0: IP over IEEE1394
+fwohci0: Initiate bus reset
+fwohci0: Clear PME# now
+gem0 at pci2 dev 15 function 0: Apple Computer GMAC Ethernet (rev. 0x80)
+gem0: interrupting at irq 41
+bmtphy0 at gem0 phy 0: BCM5221 10/100 media interface, rev. 4
+bmtphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+gem0: Ethernet address 00:11:24:76:dd:a0, 10KB RX fifo, 4KB TX fifo
+vmmask 737c0000 schedmask 7ffc0000 highmask 7ffc0000
+WARNING: system needs entropy for security; see entropy(7)
+timecounter: Timecounter "mftb" frequency 41620907 Hz quality 100
+fwohci0: BUS reset
+fwohci0: node_id=0xc800ffc0, gen=2, CYCLEMASTER mode
+ieee1394if0: 1 nodes, maxhop <= 0 cable IRM irm(0) (me)
+ieee1394if0: bus manager 0
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+IPsec: Initialized Security Association Processing.
+uhub0 at usb0: NetBSD (0x0000) OHCI root hub (0x0000), class 9/0, rev 1.00/1.00, addr 1
+uhub0: 2 ports with 2 removable, self powered
+uhub1 at usb1: NetBSD (0x0000) OHCI root hub (0x0000), class 9/0, rev 1.00/1.00, addr 1
+uhub1: 3 ports with 3 removable, self powered
+uhub2 at usb2: NetBSD (0x0000) OHCI root hub (0x0000), class 9/0, rev 1.00/1.00, addr 1
+uhub2: 2 ports with 2 removable, self powered
+uhub3 at usb3: NetBSD (0x0000) EHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 1
+uhub3: 5 ports with 5 removable, self powered
+atapibus0 at atabus1: 2 targets
+cd0 at atapibus0 drive 1: <MATSHITACD-RW  CW-8123, , CAD4> cdrom removable
+cd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 2 (Ultra/33)
+wd0 at atabus1 drive 0
+wd0: <ST9808210A>
+wd0: drive supports 16-sector PIO transfers, LBA48 addressing
+wd0: 76319 MB, 155061 cyl, 16 head, 63 sec, 512 bytes/sect x 156301488 sectors
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100)
+wd0(wdc1:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100) (using DMA)
+cd0(wdc1:0:1): using PIO mode 4, DMA mode 2, Ultra-DMA mode 2 (Ultra/33) (using DMA)
+uhub4 at uhub3 port 2: Genesys Logic (0x05e3) USB2.0 Hub (0x0608), class 9/0, rev 2.00/7.02, addr 2
+uhub4: single transaction translator
+uhub4: 4 ports with 4 removable, self powered
+uhidev0 at uhub4 port 3 configuration 1 interface 0
+uhidev0: PixArt (0x093a) USB Optical Mouse (0x2510), rev 1.10/1.00, addr 3, iclass 3/1
+ums0 at uhidev0: 3 buttons and Z dir
+wsmouse0 at ums0 mux 0
+uhub5 at uhub4 port 4: Mitsumi Electric (0x05ac) Hub in Apple Extended USB Keyboard (0x1003), class 9/0, rev 1.10/4.10, addr 4
+uhub5: 3 ports with 2 removable, bus powered
+uhidev1 at uhub5 port 3 configuration 1 interface 0
+uhidev1: Mitsumi Electric (0x05ac) Apple Extended USB Keyboard (0x020d), rev 1.10/4.10, addr 5, iclass 3/1
+ukbd0 at uhidev1: 8 Variable keys, 6 Array codes
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev2 at uhub5 port 3 configuration 1 interface 1
+uhidev2: Mitsumi Electric (0x05ac) Apple Extended USB Keyboard (0x020d), rev 1.10/4.10, addr 5, iclass 3/0
+uhidev2: 3 report ids
+uhid0 at uhidev2 reportid 2: input=1, output=0, feature=0
+uhid1 at uhidev2 reportid 3: input=3, output=0, feature=0
+swwdog0: software watchdog initialized
+autoconfiguration error: wdc1:0:0: lost interrupt
+	type: ata tc_bcount: 512 tc_skip: 0
+wdc1:0:0: intr with DRQ (st=0x58)
+wd0c: device timeout reading fsbn 0 (wd0 bn 0; cn 0 tn 0 sn 0), xfer f70, retry 0
+autoconfiguration error: wdc1:0:0: lost interrupt
+	type: ata tc_bcount: 512 tc_skip: 0
+wdc1:0:0: intr with DRQ (st=0x58)
+wd0c: device timeout reading fsbn 0 (wd0 bn 0; cn 0 tn 0 sn 0), xfer f70, retry 1
+wdc1:0:0: intr with DRQ (st=0x58)
+wd0c: device timeout reading fsbn 0 (wd0 bn 0; cn 0 tn 0 sn 0), xfer f70, retry 2
+wd0: soft error (corrected) xfer f70
+WARNING: 5 errors while detecting hardware; check system log.
+boot device: gem0
+root on gem0
+nfs_boot: trying DHCP/BOOTP
+nfs_boot: DHCP next-server: 192.168.111.2
+nfs_boot: my_domain=4407.kankyo-u.ac.jp
+nfs_boot: my_addr=192.168.111.29
+nfs_boot: my_mask=255.255.255.0
+nfs_boot: gateway=192.168.111.2
+nfs server 192.168.111.2:/home/nakaji/macppc: not responding
+nfs server 192.168.111.2:/home/nakaji/macppc: is alive again
+root on 192.168.111.2:/home/nakaji/macppc
+root file system type: nfs
+kern.module.path=/stand/macppc/10.1/modules
+entropy: pid 186 (dd) waiting for entropy(7)
+entropy: best effort
+wsdisplay0: screen 1 added (fb, vt100 emulation)
+wsdisplay0: screen 2 added (fb, vt100 emulation)
+wsdisplay0: screen 3 added (fb, vt100 emulation)
+wsdisplay0: screen 4 added (fb, vt100 emulation)
