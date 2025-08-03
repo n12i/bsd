@@ -1,0 +1,141 @@
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003,
+    2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
+    2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,
+    2024, 2025
+    The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 11.0_BETA (GENERIC) #0: Thu Jul 31 09:38:05 UTC 2025
+	mkrepro@mkrepro.NetBSD.org:/usr/src/sys/arch/amd64/compile/GENERIC
+total memory = 1023 MB
+avail memory = 962 MB
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+mainbus0 (root)
+ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+ACPI: XSDT 0x000000003FFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+ACPI: FACP 0x000000003FFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+ACPI: DSDT 0x000000003FFF0610 002353 (v02 VBOX   VBOXBIOS 00000002 INTL 20250404)
+ACPI: FACS 0x000000003FFF0200 000040
+ACPI: APIC 0x000000003FFF0240 000054 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+ACPI: SSDT 0x000000003FFF02A0 00036C (v01 VBOX   VBOXCPUT 00000002 INTL 20250404)
+ACPI: 2 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 1: pa 0xfec00000, version 0x20, 24 pins
+cpu0 at mainbus0 apid 0
+cpu0: Use lfence to serialize rdtsc
+cpu0: Intel(R) Core(TM)2 Duo CPU     P8600  @ 2.40GHz, id 0x1067a
+cpu0: node 0, package 0, core 0, smt 0
+acpi0 at mainbus0: Intel ACPICA 20241212
+acpi0: X/RSDT: OemId <VBOX  ,VBOXXSDT,00000001>, AslId <ASL ,00000061>
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+acpi0: fixed sleep button present
+timecounter: Timecounter "ACPI-Safe" frequency 3579545 Hz quality 900
+pckbc1 at acpi0 (PS2K, PNP0303) (kbd port): io 0x60,0x64 irq 1
+pckbc2 at acpi0 (PS2M, PNP0F03) (aux port): irq 12
+attimer1 at acpi0 (TIMR, PNP0100): io 0x40-0x43,0x50-0x53
+acpivga0 at acpi0 (GFX0): ACPI Display Adapter
+acpiout0 at acpivga0 (VGA, 0x0100): ACPI Display Output Device
+acpivga0: connected output devices:
+acpivga0:   0x0100 (acpiout0): VGA Analog Monitor, index 0, port 0, head 0
+acpiacad0 at acpi0 (AC, ACPI0003-0): ACPI AC Adapter
+ACPI: Enabled 2 GPEs in block 00 to 07
+pckbd0 at pckbc1 (kbd slot)
+pckbc1: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc1 (aux slot)
+pckbc1: using irq 12 for aux slot
+wsmouse0 at pms0 mux 0
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: This pci host supports neither MSI nor MSI-X.
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+pchb0 at pci0 dev 0 function 0: Intel 82441FX (PMC) PCI and Memory Controller (rev. 0x02)
+pcib0 at pci0 dev 1 function 0: Intel 82371SB (PIIX3) PCI-ISA Bridge (rev. 0x00)
+piixide0 at pci0 dev 1 function 1: Intel 82371AB IDE controller (PIIX4) (rev. 0x01)
+piixide0: bus-master DMA support present
+piixide0: primary channel configured to compatibility mode
+piixide0: primary channel interrupting at ioapic0 pin 14
+atabus0 at piixide0 channel 0
+piixide0: secondary channel configured to compatibility mode
+piixide0: secondary channel interrupting at ioapic0 pin 15
+atabus1 at piixide0 channel 1
+vga0 at pci0 dev 2 function 0: VMware Virtual SVGA II (rev. 0x00)
+wsdisplay0 at vga0 kbdmux 1: console (80x25, vt100 emulation), using wskbd0
+wsmux1: connecting to wsdisplay0
+drm at vga0 not configured
+wm0 at pci0 dev 3 function 0, 64-bit DMA: Intel i82540EM 1000BASE-T Ethernet (rev. 0x02)
+wm0: interrupting at ioapic0 pin 19
+wm0: 32-bit 33MHz PCI bus
+wm0: 64 words (6 address bits) MicroWire EEPROM
+wm0: RX packet buffer size: 48KB
+wm0: Ethernet address 08:00:27:2d:18:ef
+wm0: 0x2<LOCK_EECD>
+makphy0 at wm0 phy 1: Marvell 88E1011 Gigabit PHY, rev. 4
+makphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+wm0: Clear PME# now
+VirtualBox Guest Service (miscellaneous system) at pci0 dev 4 function 0 not configured
+auich0 at pci0 dev 5 function 0: i82801AA (ICH) AC-97 Audio
+auich0: interrupting at ioapic0 pin 21
+auich0: ac97: SigmaTel STAC9700 codec; no 3D stereo
+auich0: ac97: ext id 0x809<AC97_23,VRM,VRA>
+ohci0 at pci0 dev 6 function 0: Apple Computer Intrepid USB Controller (rev. 0x00)
+ohci0: interrupting at ioapic0 pin 22
+ohci0: OHCI version 1.0
+usb0 at ohci0: USB revision 1.0
+piixpm0 at pci0 dev 7 function 0: Intel 82371AB (PIIX4) Power Management Controller (rev. 0x08)
+piixpm0: interrupting at ioapic0 pin 23
+iic0 at piixpm0 port 0: I2C bus
+ehci0 at pci0 dev 11 function 0: Intel 82801FB/FR USB EHCI Controller (rev. 0x00)
+ehci0: 32-bit DMA
+ehci0: interrupting at ioapic0 pin 19
+ehci0: EHCI version 1.0
+ehci0: Using DMA subregion for control data structures
+usb1 at ehci0: USB revision 2.0
+isa0 at pcib0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0: PC Speaker
+wsbell at spkr0 not configured
+midi0 at pcppi0: PC speaker
+sysbeep0 at pcppi0
+attimer1: attached to pcppi0
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: HLT, lat   0 us, pow     0 mW
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+acpiacad0: AC adapter online.
+auich0: measured ac97 link rate at 47992 Hz, will use 48000 Hz
+audio0 at auich0: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr1 at audio0: PC Speaker (synthesized)
+wsbell at spkr1 not configured
+IPsec: Initialized Security Association Processing.
+uhub0 at usb0: NetBSD (0x0000) OHCI root hub (0x0000), class 9/0, rev 1.00/1.00, addr 1
+uhub0: 12 ports with 12 removable, self powered
+uhub1 at usb1: NetBSD (0x0000) EHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 1
+uhub1: 12 ports with 12 removable, self powered
+wd0 at atabus0 drive 0
+wd0: <VBOX HARDDISK>
+wd0: drive supports 128-sector PIO transfers, LBA addressing
+wd0: 40960 MB, 83220 cyl, 16 head, 63 sec, 512 bytes/sect x 83886080 sectors
+wd0: GPT GUID: 580d35d7-8b59-474e-9e0a-80effe05b865
+dk0 at wd0: "3dfceccf-5ff1-4ad7-b731-cc173b9b3154", 81788800 blocks at 64, type: ffs
+dk1 at wd0: "bd6af37e-00fc-4111-8152-6a9472b0da3c", 2097152 blocks at 81788864, type: swap
+wd0: 32-bit data port
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133)
+wd0(piixide0:0:0): using PIO mode 4, Ultra-DMA mode 2 (Ultra/33) (using DMA)
+atapibus0 at atabus1: 2 targets
+cd0 at atapibus0 drive 0: <VBOX CD-ROM, VB2-01700376, 1.0> cdrom removable
+cd0: 32-bit data port
+cd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133)
+cd0(piixide0:1:0): using PIO mode 4, Ultra-DMA mode 2 (Ultra/33) (using DMA)
+swwdog0: software watchdog initialized
+boot device: wd0
+root on dk0 dumps on dk1
+root file system type: ffs
+kern.module.path=/stand/amd64/11.0/modules
+wsdisplay0: screen 1 added (80x25, vt100 emulation)
+wsdisplay0: screen 2 added (80x25, vt100 emulation)
+wsdisplay0: screen 3 added (80x25, vt100 emulation)
+wsdisplay0: screen 4 added (80x25, vt100 emulation)
